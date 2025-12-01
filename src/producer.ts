@@ -20,7 +20,7 @@ const Producers = async () => {
         topic: "rider-updates",
         messages: [
           {
-            partition: location?.toLowerCase() === "north" ? 0 : 1,
+            // partition: location?.toLowerCase() === "north" ? 0 : 1, you may add the partition but in prod people will avoid it and make sure that the key should be riderID not a random string 
             key: "location-update",
             value: JSON.stringify({ name: riderName, location }),
           },

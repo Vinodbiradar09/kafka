@@ -18,7 +18,7 @@ const Consumers = async () => {
       },
     });
   } catch (error) {
-    console.log("error in connecting consumer");
+    console.log("error in connecting consumer" , error);
   }
 };
 
